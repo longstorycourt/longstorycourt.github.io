@@ -10,7 +10,7 @@ aboutContent.innerHTML += `
 myPracticalSkills = ['CSS', 'HTML', 'Java', 'JavaScript', 'Bootstrap', 'TailWind', 'C', 'C++'];
 myPracticalSkills.sort();
 for (let i of myPracticalSkills) {
-    skills.innerHTML += `<button type="button" class="btn btn-lg btn-secondary m-1">${i}</button>`;
+    skills.innerHTML += `<button type="button" class="btn btn-lg btn-secondary m-1 pe-none">${i}</button>`;
 }
 
 let projectItems = [{
@@ -42,7 +42,7 @@ let projectItems = [{
 
 for (let project of projectItems) {
     projectContent.innerHTML +=
-        `<div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
+        `<div class="col-12 col-md-6 col-lg-4 d-flex">
         <div class="card border-1 border-dark">
         <img class="card-img-top" src="${project.src}" alt="${project.alt}">
         <div class="card-body d-flex flex-column justify-content-between">
@@ -50,7 +50,7 @@ for (let project of projectItems) {
             <h4 class="card-title text-light fw-bold">${project.title}</h5>
             <p class="card-text  fw-light">${project.desc}</p>
             </div>
-            <a href="${project.url}" class="btn btn-light fw-bold" style="width: fit-content;">See source code here.</a>
+            <a href="${project.url}" target="_blank" class="btn btn-light fw-bold" style="width: fit-content;">See source code here.</a>
         </div>
         </div>
     </div>`;
@@ -93,7 +93,7 @@ for (let item of extraItems) {
     extraContent.innerHTML +=
         `<div class="col-12 col-md-6 col-lg-4 d-flex align-items-stretch">
         <div class="card border-1 border-dark">
-            <img class="card-img-top h-50 object-fit-cover" src="${item.src}" alt="">
+            <img class="card-img-top object-fit-cover" src="${item.src}" alt="">
             <div class="card-body pb-0 h-25">
                 <h4 class="card-title text-light fw-bold">${item.title}</h5>
                 <hr>
